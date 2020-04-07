@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+<bean id="dizel" class="com.v.DizelMotor" ></bean>
+<bean id="mercedes200" class="com.v.Mercedes" > 
+<constructor-arg ref="dizel"/>
+ </bean>
+ <bean id="benzin" class="com.v.BenzinliMotor" ></bean>
+<bean id="mercedes190D" class="com.v.Mercedes" > 
+<constructor-arg ref="benzin"/>
+ </bean>
+
+</beans>
