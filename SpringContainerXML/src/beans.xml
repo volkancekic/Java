@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<bean id="ilkinsan" class="com.v.Insan" scope="prototype">
+<constructor-arg name="isim" value="baba"/>
+<constructor-arg name="dogumYili" value="1950"/>
+</bean>
+
+<bean id="sonrakiinsan" class="com.v.Insan" scope="prototype">
+<constructor-arg name="isim" value="cocuk"/>
+<constructor-arg name="dogumYili" value="2000" />
+<property name="babasi" ref="ilkinsan"/>
+</bean>
+
+<bean id="ilkhayvan" class="com.v.Hayvan" scope="prototype">
+<property name="cinsi" value="kus"/>
+<property name="ayakSayisi" value="2"/>
+</bean>
+
+<bean id="ilkbitki" class="com.v.Bitki" scope="prototype">
+<constructor-arg name="renk" value="mor"/>
+<constructor-arg name="isim" value="menekse"/>
+</bean>
+
+
+</beans>
