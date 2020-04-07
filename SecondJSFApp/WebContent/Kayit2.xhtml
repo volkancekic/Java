@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<head>
+<title>ogr kayit </title>
+<style>
+.hata{color:red;}
+</style>
+</head>
+<body>
+
+	<h:form>
+		<label>Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<h:inputText id="firstname" value="#{student2.name}" required="true" requiredMessage="name boş geçilemez"/><br/><br/>
+		<label>Lastname: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<h:inputText id="lastname" value="#{student2.lastname}" required="true" requiredMessage="lastname boş geçilemez" /><br/><br/>
+		<label>City: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<h:selectOneMenu value="#{student2.sehir}">
+		<f:selectItem itemValue="01" itemLabel="Adana"/>
+		<f:selectItem itemValue="02" itemLabel="Adıyaman"/>
+		<f:selectItem itemValue="06" itemLabel="Ankara"/>
+		</h:selectOneMenu>
+		<h:message for="firstname" styleClass="hata"/>
+		<h:message for="lastname" styleClass="hata"/>
+		
+		<h:commandButton type="submit" value="Kaydet" action="Kayit-onay2"/>
+	</h:form>
+
+</body>
+</html>

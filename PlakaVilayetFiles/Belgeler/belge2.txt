@@ -1,0 +1,8 @@
+1 Adana
+2 Samsun
+5 Amasya
+6 Ankara
+7 Antalya
+8 Artvin
+9 Aydýn
+10 Balýkesir

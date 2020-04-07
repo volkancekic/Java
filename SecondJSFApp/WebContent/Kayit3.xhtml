@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<head>
+<title>ogr kayit </title>
+</head>
+<body>
+
+	<h:form>
+		<label>Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<h:inputText id="firstname" value="#{student3.name}"/><br/><br/>
+		<label>Lastname: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<h:inputText id="lastname" value="#{student3.lastname}" /><br/><br/>
+		<label>City: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<h:selectOneMenu value="#{student3.sehir}">
+		<f:selectItems value="#{student3.cities}"/>
+		
+		</h:selectOneMenu>
+		<h:commandButton type="submit" value="Kaydet" action="Kayit-onay3"/>
+	</h:form>
+
+</body>
+</html>
