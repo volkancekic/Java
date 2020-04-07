@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<head>
+		<title>Cevaplar</title>
+		<style>
+		body {
+			  max-width: 500px;
+			  margin: auto;
+			  background: white;
+			  padding: 80px;
+			}
+			</style>
+	</head>
+	<body>
+	
+	<table border="1px" bordercolor="blue" cellpadding="8">
+	<thead><th colspan="2"><h3>Anket Cevaplarınız</h3></th></thead>
+	<tbody>
+	<tr>
+	<th>Ad :</th> <td>#{anket.ad}</td>
+	</tr>
+	<tr>
+	<th>Soyad :</th> <td>#{anket.soyad}</td>
+	</tr>
+	<tr>
+	<th>Cinsiyet :</th> <td>#{anket.cinsiyet}</td>
+	</tr>
+	<tr>
+	<th>Sehir :</th> <td>#{anket.sehir}</td>
+	</tr>
+	<tr>
+	<th>Yas :</th> <td>#{anket.yas}</td>
+	</tr>
+	<tr>
+	<th>Ogrenim Durumu:</th> <td>#{anket.ogrenim_durumu}</td>
+	</tr>
+	<tr>
+	<th>Calıstıgı Sektor :</th> <td>#{anket.sektor}</td>
+	</tr>
+	<tr>
+	<th>Gelir Aralıgı :</th> <td>#{anket.gelir}</td>
+	</tr>
+	<tr>
+	<th>En Çok Harcama Yapılanlar :</th>
+	 <td><ui:repeat var="hrcm" value="#{anket.harcama}">
+			#{hrcm},
+		</ui:repeat></td>
+	</tr>
+	<tr>
+	<th>Bos Zaman Degerlendirme :</th> 
+	<td><ui:repeat var="bzmn" value="#{anket.bos_zaman}">
+			#{bzmn},
+		</ui:repeat></td>
+	</tr>	
+	
+	</tbody>
+	</table>
+	#{anket.db_connection}
+	</body>
+</html>

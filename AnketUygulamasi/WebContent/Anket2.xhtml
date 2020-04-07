@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+	<head>
+		<title>Anket Sayfa 2</title>
+		<style>
+			body {
+			  max-width: 500px;
+			  margin: auto;
+			  background: white;
+			  padding: 20px;
+			}
+			.formElement{
+			  width: 55%;
+			  padding: 10px 20px;
+			  margin: 4px 0;
+			  box-sizing: border-box;
+			  border: 2px solid DeepSkyBlue;
+			  border-radius: 4px;
+			}
+		 .button {
+			  background-color: #4CAF50; 
+			  border: none;
+			  color: white;
+			  padding: 12px 24px;
+			  text-align: center;
+			  text-decoration: none;
+			  display: inline-block;
+			  font-size: 14px;
+			  margin: 4px 2px;
+			  transition-duration: 0.4s;
+			  cursor: pointer;
+			}
+			
+			
+			
+			.button2 {
+			  background-color: white; 
+			  color: black; 
+			  border: 2px solid #008CBA;
+			}
+			
+			.button2:hover {
+			  background-color: #008CBA;
+			  color: white;
+			}
+			.hata_mesaj{
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+	<h:form>
+		
+		<label>Öğrenim Durumunuz : </label><br/>
+		<h:selectOneMenu class="formElement" value="#{anket.ogrenim_durumu}">
+			<f:selectItems value="#{anket.ogr_durum}"/>
+		</h:selectOneMenu>
+		
+	<br/><br/>	<label>Çalıştığınız Sektör : </label><br/>
+		<h:selectOneRadio class="formElement" style="width:55%;" id="sektor" value="#{anket.sektor}" required="true" requiredMessage="Çalıştığınız sektör alanı boş bırakılamaz !">
+			<f:selectItem itemValue="Kamu" itemLabel="Kamu"/>
+			<f:selectItem itemValue="Ozel" itemLabel="Ozel"/>
+			<f:selectItem itemValue="Serbest" itemLabel="Serbest"/>
+		</h:selectOneRadio>
+		<h:message for="sektor" styleClass="hata_mesaj"/><br/>
+		<br/><label>Aylık Geliriniz : </label><br/>
+		<h:selectOneMenu class="formElement" value="#{anket.gelir}"> 
+			<f:selectItems value="#{anket.aylik_gelir}"/>
+		</h:selectOneMenu>
+		
+	<br/><br/>	<label>Kazancınızı En Çok Neye Harcıyorsunuz? : </label>
+		<h:selectManyCheckbox class="formElement" style="width:85%;" id="harcama" value="#{anket.harcama}" >
+			<f:selectItem itemValue="Ev Kirasi_Faturalar" itemLabel="Ev Kirasi-Faturalar"/>
+			<f:selectItem itemValue="Giyim" itemLabel="Giyim"/>
+			<f:selectItem itemValue="Yiyecek_Icecek" itemLabel="Yiyecek-Icecek"/>
+			<f:selectItem itemValue="Seyahat" itemLabel="Seyahat"/>			
+		</h:selectManyCheckbox>
+		
+		
+	<br/><br/>	<label>Boş Zamanlarınızı Nasıl Değerlendiriyorsunuz? : </label>
+		<h:selectManyCheckbox class="formElement" style="width:85%;" id="bos_zaman" value="#{anket.bos_zaman}" >
+			<f:selectItem itemValue="Kitap Okumak" itemLabel="Kitap Okumak"/>
+			<f:selectItem itemValue="Arkadaslarla Bulusmak" itemLabel="Arkadaslarla Bulusmak"/>
+			<f:selectItem itemValue="Sinemaya Gitmek" itemLabel="Sinemaya Gitmek"/>
+			<f:selectItem itemValue="Oyun Oynamak" itemLabel="Oyun Oynamak"/>			
+		</h:selectManyCheckbox>
+				<br/><h:commandButton class="button button2" type="submit" value="Sonuçları Gönder" action="Cevap"/>
+		
+		</h:form>
+	</body>
+</html>
