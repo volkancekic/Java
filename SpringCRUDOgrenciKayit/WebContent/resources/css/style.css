@@ -1,0 +1,90 @@
+table {
+	border-collapse: collapse;
+	border-bottom: 1px solid gray;
+	font-family: Tahoma,Verdana,sans-serif;
+	width: 90%;
+}
+html,body{
+	margin-left: 15px;
+	margin-right: 15px;
+	padding: 0px;
+	font-family: Tahoma,Verdana,sans-serif;
+}
+th {
+	border-bottom: 1px solid gray;
+	background: none repeat scroll 0 0 #4276B2;
+	padding: 10px;
+	color: #ffffff 
+}
+tr {
+	border-top: 1px solid gray;
+	text-align: center;
+}
+tr:nth-child(even) {background: #ffffff; color:#400040}
+tr:nth-child(odd) {background: #bbbbbb }
+
+#wrapper {width: 100%; margin-top: 0px; margin-bottom:20px}
+#header {width: 89%; background: #4267B2; margin-top: 0px; padding:15px 0px 15px 15px; color: #FFFFFF}
+#header h2 {width: 100%; margin:auto; color: #FFFFFF;}
+
+.add-button{
+	border: 1px solid #666;
+	border-radius: 5px;
+	padding: 4px;
+	font-size: 12px;
+	font-weight: bold;
+	width: 100px;
+	background: #cccccc;
+}
+
+.save-button{
+	border: 1px solid #666;
+	border-radius: 5px;
+	padding: 4px;
+	font-size: 12px;
+	font-weight: bold;
+	width: 100px;
+	background: #cccccc;
+}
+
+.update-button{
+	border: 1px solid #666;
+	border-radius: 5px;
+	padding: 4px;
+	font-size: 12px;
+	font-weight: bold;
+	width: 80px;
+	background: #0080ff;
+/* 	margin-top: 30px; */
+}
+.delete-button{
+	border: 1px solid #666;
+	border-radius: 5px;
+	padding: 4px;
+	font-size: 12px;
+	font-weight: bold;
+	width: 80px;
+	background: #ff0000;
+}
+/*menu sayfasý css i */
+.menu_ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3399FF;
+  width:90%;
+}
+.menu_li {
+  float: left;
+}
+.menu_li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.menu_li a:hover {
+  background-color:#FFCC33;  
+}
