@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwwthymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<h4>Student Form</h4>
+<hr/>
+
+<div class="container">
+   <form th:action="@{/students/savestudent}" th:object="${student}" method="post">
+       Id: <input type="text" class="form-control col-3 m-4" th:field="*{id}" /><br/>
+       First Name: <input type="text" class="form-control col-3 m-4" th:field="*{firstName}" /><br/>
+       Last Name: <input type="text" class="form-control col-3 m-4" th:field="*{lastName}" /><br/>
+       <button type="submit" class="btn btn-info col-2 m-4">Save</button>
+   </form>
+</div>
+
+
+</body>
+</html>

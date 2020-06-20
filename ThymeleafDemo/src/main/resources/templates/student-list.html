@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwwthymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student List</title>
+   <!-- <link rel="stylesheet" th:href="@{style.css}" /> Kendi CSS Dosyamız  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body>
+<h4>Student List</h4>
+<hr/>
+<div class="container">
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody class="sekil2">
+    <tr th:each="std : ${students}">
+        <td th:text="${std.id}"/>
+        <td th:text="${std.firstName}"/>
+        <td th:text="${std.lastName}"/>
+        <td><a th:href="@{/students/updatestudent(id=${std.id})}" class="btn btn-info btn-sm">Update</a>
+        &nbsp;
+          <a th:href="@{/students/deletestudent(id=${std.id})}" onclick="if(!confirm('Deleting,sure?')) return false" class="btn btn-danger btn-sm">Delete</a>
+        </td>
+
+    </tr>
+    </tbody>
+</table>
+<br/>
+<a th:href="@{/students/addstudent}" class="btn btn-success btn-sm">New Student</a>
+</div>
+</body>
+</html>
